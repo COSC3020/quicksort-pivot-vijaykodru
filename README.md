@@ -20,3 +20,37 @@ quantitatively reason with them.
 Add your answer to this markdown file. [This
 page](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
 might help with the notation for mathematical expressions.
+
+
+
+From the lecture slides, for the leftmost method of picking a pivot we can say that the chance of picking a good pivot is (1/2) and picking a pivot that is smaller or larger than a good pivot is (1/4) each resulting in (1/2) as well. 
+
+Median of three is also a good way of picking a pivot point. For this let us consider the pivots (L, G, R). L represents a pivot that is smaller than the good pivot, R represents a pivot larger than the good pivot and G represents a good pivot. Let us consider all the possible outcomes
+
+
+$LLL = (1/4)^3 = 1/64$\
+$GGG = (1/2)^3 = 1/8 = 8/64$\
+$RRR = (1/4)^3 = 1/64$\
+$LGR = (1/4)^2 * (1/2) = 1/32 = 2/64$\
+$LRR = (1/4)^3 = 1/64$\
+$LLG = (1/4)^2 * (1/2) = 1/32 = 2/64$\
+$GRR = (1/4)^2 * (1/2) = 1/32 = 2/64$\
+$LGG = (1/4) * (1/2)^2 = 1/16 = 4/64$\
+$GGR = (1/4) * (1/2)^2 = 1/16 = 4/64$\
+$LLR = (1/4)^3 = 1/64$
+
+Now if we consider all the possible outcomes for good choice we have the following
+
+$GGG$ has only one permutation resulting in $8/64$\
+$GGR$ has $GGR, GRG, RGG$ resulting in $3 * (4/64) = 12/64$\
+$LGG$ has $LGG, GLG, GGL$ resulting in $3 * (4/64) = 12/64$\
+$LGR$ has $LGR, LRG, GLR, GRL, RGL, RLG$ resulting in $6 * 2/64 = 12/64$
+
+If we add all these outcomes we will get $8/64 + (3 * (12/64)) = 44/64 = 68\%$\
+Therefore, with the above proof we can say that the Median of Three picks a better pivot 18% of the time than the leftmost approach
+
+Reference:
+quicksort-pivot-AndonM\
+quicksort-pivot-IshitaPatel18\
+lecture slides
+
