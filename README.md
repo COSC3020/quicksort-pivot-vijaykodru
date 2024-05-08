@@ -46,7 +46,7 @@ $GGR$ has $GGR, GRG, RGG$ resulting in $3 * (4/64) = 12/64$\
 $LGG$ has $LGG, GLG, GGL$ resulting in $3 * (4/64) = 12/64$\
 $LGR$ has $LGR, LRG, GLR, GRL, RGL, RLG$ resulting in $6 * 2/64 = 12/64$
 
-If we add all these outcomes we will get $8/64 + (3 * (12/64)) = 44/64$ that turns out to be close to ~68%
+If we add all these outcomes we will get $8/64 + (3 * (12/64)) = 44/64 = 0.6875$ that turns out to be close to $0.6875 * 100 = 68.75$%
 
 With leftmost approach we can get a good pivot about 50% of the time and the median of three does it 68% of the time which makes median of three 18% (68%-50%) better when picking a good pivot.
 
